@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Security Challenge</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🗄️ Database Security Challenge</h1>
+
+        <div class="card">
+            <h2>User Lookup</h2>
+
+            <form action="/database" method="GET">
+                <input
+                    type="text"
+                    name="username"
+                    placeholder="Enter username"
+                    value="{{ username }}"
+                    required
+                >
+                <button type="submit">Search</button>
+            </form>
+
+            {% if user %}
+                <h3>Result</h3>
+                <p><strong>ID:</strong> {{ user[0] }}</p>
+                <p><strong>Username:</strong> {{ user[1] }}</p>
+                <p><strong>Role:</strong> {{ user[2] }}</p>
+            {% elif username %}
+                <p>No user found.</p>
+            {% endif %}
+        </div>
+
+        <a href="/">← Back to Lab</a>
+    </div>
+</body>
+</html>

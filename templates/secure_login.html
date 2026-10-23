@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Authentication Challenge</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Secure Authentication</h1>
+
+        <div class="card">
+            <h2>Secure Login</h2>
+
+            <form action="/secure-login" method="POST">
+                <input type="text" name="username" placeholder="Username" required>
+                <br><br>
+
+                <input type="password" name="password" placeholder="Password" required>
+                <br><br>
+
+                <button type="submit">Login Securely</button>
+            </form>
+
+            <p>Password verification uses a secure password hash.</p>
+        </div>
+
+        <a href="/">← Back to Lab</a>
+    </div>
+</body>
+</html>

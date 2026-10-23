@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF-Style Vulnerable Lab</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 CTF-Style Vulnerable Lab</h1>
+
+        <p>
+            A local cybersecurity training environment demonstrating
+            common web security weaknesses and their secure remediation.
+        </p>
+
+        <div class="card">
+            <h2>🎯 Challenges</h2>
+
+            <ol>
+                <li>
+                    <strong>Search Input Security</strong>
+                    — XSS demonstration and remediation
+                    <br><br>
+                    <a href="/search?q=CTF-Test">Open Search Challenge →</a>
+                </li>
+
+                <li>
+                    <strong>Authentication Security</strong>
+                    — Weak authentication vs password hashing
+                    <br><br>
+                    <a href="/login">Vulnerable Login →</a>
+                    &nbsp; | &nbsp;
+                    <a href="/secure-login">Secure Login →</a>
+                </li>
+
+                <li>
+                    <strong>Database Security</strong>
+                    — SQLite user lookup with parameterized queries
+                    <br><br>
+                    <a href="/database">Open Database Challenge →</a>
+                </li>
+            </ol>
+        </div>
+
+        <div class="card">
+            <h2>🔐 Security Focus</h2>
+            <ul>
+                <li>Cross-Site Scripting (XSS)</li>
+                <li>Authentication weaknesses</li>
+                <li>Password hashing</li>
+                <li>SQL injection prevention</li>
+                <li>Parameterized database queries</li>
+            </ul>
+        </div>
+
+        <p><strong>⚠️ Local training lab — designed for authorized testing only.</strong></p>
+    </div>
+</body>
+</html>
